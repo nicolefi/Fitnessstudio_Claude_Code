@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ImagePlaceholder } from "./ImagePlaceholder";
 
-const items = Array.from({ length: 6 }, (_, i) => `Impression ${i + 1}`);
+const items = Array.from({ length: 6 }, (_, i) => `Studio-Impression ${i + 1}`);
 
 export function Gallery() {
   const [active, setActive] = useState<string | null>(null);

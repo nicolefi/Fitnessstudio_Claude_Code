@@ -2,6 +2,8 @@
 
 Responsive One-Page-Website für das fiktive Fitnessstudio **So Fresh**: dunkles Design, Neon-Grün als Akzentfarbe, grosse Typografie und Grain-Textur. Aktuell mit Platzhalter-Content, Design und Struktur stehen.
 
+**Live-Demo:** [fitnessstudio-claude-code.vercel.app](https://fitnessstudio-claude-code.vercel.app)
+
 ![Status](https://img.shields.io/badge/Status-Platzhalter--Phase-orange)
 
 ## Features
@@ -33,8 +35,8 @@ Responsive One-Page-Website für das fiktive Fitnessstudio **So Fresh**: dunkles
 
 ```bash
 # Repository klonen
-git clone https://github.com/<DEIN-USERNAME>/<REPO-NAME>.git
-cd <REPO-NAME>
+git clone https://github.com/nicolefi/Fitnessstudio_Claude_Code.git
+cd Fitnessstudio_Claude_Code
 
 # Abhängigkeiten installieren
 npm install
@@ -104,7 +106,16 @@ so-fresh/
 
 ## Deployment
 
-Das Projekt lässt sich z. B. über [Vercel](https://vercel.com/) veröffentlichen: Repository verbinden und deployen. Sinnvoll erst mit echtem Content.
+Das Projekt ist auf [Vercel](https://vercel.com/) deployt: [fitnessstudio-claude-code.vercel.app](https://fitnessstudio-claude-code.vercel.app). Jeder Push auf `main` löst automatisch ein neues Deployment aus.
+
+Benötigte Environment Variables (lokal in `.env.local`, auf Vercel in den Projekteinstellungen):
+
+| Variable            | Beschreibung                  |
+| ------------------- | ----------------------------- |
+| `SUPABASE_URL`      | URL des Supabase-Projekts     |
+| `SUPABASE_ANON_KEY` | Öffentlicher Anon-Key         |
+
+Das Probetraining-Formular schreibt in die Supabase-Tabelle `trial_requests` (`name`, `email`, `goal`) mit einer RLS-Policy, die nur anonyme Inserts erlaubt.
 
 ## Autorin
 
